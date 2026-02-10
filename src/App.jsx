@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
+  const [hoveredImage, setHoveredImage] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +35,18 @@ function App() {
 
   return (
     <div className="app">
+      {hoveredImage && (
+        <div 
+          className="image-preview-overlay"
+          onMouseLeave={() => setHoveredImage(null)}
+        >
+          <img 
+            src={hoveredImage} 
+            alt="Preview" 
+            className="image-preview-zoomed"
+          />
+        </div>
+      )}
       <nav className="navbar">
         <div className="navbar-container">
           <div className="logo">Yucheng Huang (Jyuching Wong)</div>
@@ -109,7 +122,13 @@ function App() {
           <h2>Projects</h2>
           <div className="projects-grid">
             <div className="project-card">
-              <img src="/photos/Cruise Route Recommendation.png" alt="Knowledge Graph Recommendation" onError={(e) => { e.target.parentElement.style.display = 'none'; }} />
+              <img 
+                src="/photos/Cruise Route Recommendation.png" 
+                alt="Knowledge Graph Recommendation" 
+                onError={(e) => { e.target.parentElement.style.display = 'none'; }}
+                onMouseEnter={(e) => setHoveredImage(e.target.src)}
+                onMouseLeave={() => setHoveredImage(null)}
+              />
               <div className="project-card-content">
                 <h3>Cruise Route Recommendation</h3>
                 <p>A personalized cruise ship route recommendation system based on knowledge graph technology. The system analyzes user preferences and travel history to provide intelligent route suggestions using graph-based algorithms.</p>
@@ -125,7 +144,13 @@ function App() {
             </div>
 
             <div className="project-card">
-              <img src="/photos/Manufacturing Demand Prediction.png" alt="Material Demand Prediction" onError={(e) => { e.target.parentElement.style.display = 'none'; }} />
+              <img 
+                src="/photos/Manufacturing Demand Prediction.png" 
+                alt="Material Demand Prediction" 
+                onError={(e) => { e.target.parentElement.style.display = 'none'; }}
+                onMouseEnter={(e) => setHoveredImage(e.target.src)}
+                onMouseLeave={() => setHoveredImage(null)}
+              />
               <div className="project-card-content">
                 <h3>Manufacturing Demand Prediction</h3>
                 <p>A neural network-based material demand forecasting system for manufacturing industry. Uses LSTM and GRU models to predict future material requirements, improving inventory management efficiency.</p>
@@ -141,7 +166,13 @@ function App() {
             </div>
 
             <div className="project-card">
-              <img src="/photos/Momentus.png" alt="Momentus App" onError={(e) => { e.target.parentElement.style.display = 'none'; }} />
+              <img 
+                src="/photos/Momentus.png" 
+                alt="Momentus App" 
+                onError={(e) => { e.target.parentElement.style.display = 'none'; }}
+                onMouseEnter={(e) => setHoveredImage(e.target.src)}
+                onMouseLeave={() => setHoveredImage(null)}
+              />
               <div className="project-card-content">
                 <h3>Momentus</h3>
                 <p>A smart reminder application for iOS and Android platforms. Features include location-based reminders, smart scheduling, and AI-powered suggestion engine to help users manage their daily tasks effectively.</p>
@@ -157,7 +188,13 @@ function App() {
             </div>
 
             <div className="project-card">
-              <img src="/photos/Xuechao Course Platform.png" alt="Xuechao App" onError={(e) => { e.target.parentElement.style.display = 'none'; }} />
+              <img 
+                src="/photos/Xuechao Course Platform.png" 
+                alt="Xuechao App" 
+                onError={(e) => { e.target.parentElement.style.display = 'none'; }}
+                onMouseEnter={(e) => setHoveredImage(e.target.src)}
+                onMouseLeave={() => setHoveredImage(null)}
+              />
               <div className="project-card-content">
                 <h3>Xuechao Course Platform</h3>
                 <p>A comprehensive web-based course management platform with frontend and backend implementation. Features include course browsing, online learning, student management, and interactive discussion forums.</p>
@@ -173,7 +210,13 @@ function App() {
             </div>
 
             <div className="project-card">
-              <img src="/photos/I am a Cat.png" alt="I am a Cat Game" onError={(e) => { e.target.parentElement.style.display = 'none'; }} />
+              <img 
+                src="/photos/I am a Cat.png" 
+                alt="I am a Cat Game" 
+                onError={(e) => { e.target.parentElement.style.display = 'none'; }}
+                onMouseEnter={(e) => setHoveredImage(e.target.src)}
+                onMouseLeave={() => setHoveredImage(null)}
+              />
               <div className="project-card-content">
                 <h3>I am a Cat</h3>
                 <p>An engaging casual game where players experience life from a cat's perspective. Features cute graphics, interactive gameplay, and multiple levels with increasing challenges.</p>
@@ -189,7 +232,13 @@ function App() {
             </div>
 
             <div className="project-card">
-              <img src="/photos/Expense Tracker.png" alt="Expense Tracker App" onError={(e) => { e.target.parentElement.style.display = 'none'; }} />
+              <img 
+                src="/photos/Expense Tracker.png" 
+                alt="Expense Tracker App" 
+                onError={(e) => { e.target.parentElement.style.display = 'none'; }}
+                onMouseEnter={(e) => setHoveredImage(e.target.src)}
+                onMouseLeave={() => setHoveredImage(null)}
+              />
               <div className="project-card-content">
                 <h3>Expense Tracker</h3>
                 <p>A clean and intuitive Android expense tracking application. Features include expense categorization, budget management, visual reports, and cloud sync across devices.</p>
@@ -205,7 +254,13 @@ function App() {
             </div>
 
             <div className="project-card">
-              <img src="/photos/Android System Development.png" alt="Android System Development" onError={(e) => { e.target.parentElement.style.display = 'none'; }} />
+              <img 
+                src="/photos/Android System Development.png" 
+                alt="Android System Development" 
+                onError={(e) => { e.target.parentElement.style.display = 'none'; }}
+                onMouseEnter={(e) => setHoveredImage(e.target.src)}
+                onMouseLeave={() => setHoveredImage(null)}
+              />
               <div className="project-card-content">
                 <h3>Mobile System Development</h3>
                 <p>Focused on Mobile system UI/UX development starting from 2013. Specialized in creating intuitive and visually appealing interfaces for Samsung TouchWiz system. Responsibilities included UI component design, animation implementation, and user experience optimization across multiple Android versions.</p>
@@ -221,7 +276,13 @@ function App() {
             </div>
 
             <div className="project-card">
-              <img src="/photos/Low Frequency Quantitative Trading.png" alt="Low Frequency Quantitative Trading" onError={(e) => { e.target.parentElement.style.display = 'none'; }} />
+              <img 
+                src="/photos/Low Frequency Quantitative Trading.png" 
+                alt="Low Frequency Quantitative Trading" 
+                onError={(e) => { e.target.parentElement.style.display = 'none'; }}
+                onMouseEnter={(e) => setHoveredImage(e.target.src)}
+                onMouseLeave={() => setHoveredImage(null)}
+              />
               <div className="project-card-content">
                 <h3>Low Frequency Quantitative Trading</h3>
                 <p>A financial investment trading software based on TradingView and Python. Used for A-share and cryptocurrency markets. Features include automated trading strategies, technical analysis indicators, backtesting capabilities, and real-time market data integration.</p>
