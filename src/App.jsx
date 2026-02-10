@@ -55,12 +55,12 @@ function App() {
         <div 
           className="image-preview-overlay"
           onClick={closePreview}
-          onMouseLeave={handleMouseLeave}
         >
           <img 
             src={hoveredImage} 
             alt="Preview" 
             className="image-preview-zoomed"
+            onClick={(e) => e.stopPropagation()}
           />
         </div>
       )}
