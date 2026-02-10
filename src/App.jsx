@@ -402,21 +402,21 @@ function App() {
             <div className="education-item">
               <div className="education-icon">🎓</div>
               <div className="education-info">
-                <h3>Master of Computer Science</h3>
+                <h3>Master of Supply Chain Management</h3>
                 <p className="education-school">University of Liverpool(UOL)</p>
                 <p className="education-degree">Master's Degree</p>
                 <p className="education-year">2023 - 2025</p>
-                <p className="education-description">Advanced studies in artificial intelligence and software engineering. Focused on knowledge graph, deep learning, and recommendation systems.</p>
+                <p className="education-description">Advanced studies in supply chain management and logistics optimization. Focused on applying data science and AI technologies to improve supply chain efficiency and decision-making.</p>
               </div>
             </div>
             <div className="education-item">
               <div className="education-icon">🎓</div>
               <div className="education-info">
-                <h3>Bachelor of Computer Science & Technology</h3>
+                <h3>Bachelor of Supply Chain Management</h3>
                 <p className="education-school">Shanghai Maritime University</p>
                 <p className="education-degree">Bachelor's Degree</p>
                 <p className="education-year">2019 - 2023</p>
-                <p className="education-description">Foundation in computer science, programming fundamentals, and software development principles.</p>
+                <p className="education-description">Foundation in supply chain management, logistics systems, and operations research. Developed strong analytical and problem-solving skills in complex supply chain environments.</p>
               </div>
             </div>
           </div>
