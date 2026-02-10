@@ -42,9 +42,11 @@ function App() {
   };
 
   const handleMouseLeave = () => {
-    imageTimeoutRef.current = setTimeout(() => {
-      setHoveredImage(null);
-    }, 100);
+    setHoveredImage(null);
+  };
+
+  const closePreview = () => {
+    setHoveredImage(null);
   };
 
   return (
@@ -52,11 +54,7 @@ function App() {
       {hoveredImage && (
         <div 
           className="image-preview-overlay"
-          onMouseEnter={() => {
-            if (imageTimeoutRef.current) {
-              clearTimeout(imageTimeoutRef.current);
-            }
-          }}
+          onClick={closePreview}
           onMouseLeave={handleMouseLeave}
         >
           <img 

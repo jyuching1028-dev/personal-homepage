@@ -64,10 +64,10 @@ body {
 .nav-btn {
   background: none;
   border: none;
-  font-size: 14px;
+  font-size: 12px;
   color: #6e6e73;
   cursor: pointer;
-  padding: 6px 12px;
+  padding: 4px 10px;
   position: relative;
   transition: color 0.3s ease;
   white-space: nowrap;
