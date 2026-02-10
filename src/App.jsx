@@ -161,7 +161,7 @@ function App() {
               <div className="project-card-content">
                 <h3>Xuechao Course Platform</h3>
                 <p>A comprehensive web-based course management platform with frontend and backend implementation. Features include course browsing, online learning, student management, and interactive discussion forums.</p>
-                <div className="project-year">2022</div>
+                <div className="project-year">2024 - 2025</div>
                 <div className="project-tags">
                   <span className="tag">React</span>
                   <span className="tag">Node.js</span>
@@ -177,7 +177,7 @@ function App() {
               <div className="project-card-content">
                 <h3>I am a Cat</h3>
                 <p>An engaging casual game where players experience life from a cat's perspective. Features cute graphics, interactive gameplay, and multiple levels with increasing challenges.</p>
-                <div className="project-year">2021</div>
+                <div className="project-year">2025</div>
                 <div className="project-tags">
                   <span className="tag">Unity</span>
                   <span className="tag">C#</span>
@@ -193,7 +193,7 @@ function App() {
               <div className="project-card-content">
                 <h3>Expense Tracker</h3>
                 <p>A clean and intuitive Android expense tracking application. Features include expense categorization, budget management, visual reports, and cloud sync across devices.</p>
-                <div className="project-year">2020</div>
+                <div className="project-year">2024 - 2025</div>
                 <div className="project-tags">
                   <span className="tag">Android</span>
                   <span className="tag">Java</span>
