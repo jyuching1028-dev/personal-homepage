@@ -261,49 +261,86 @@ function App() {
               <div className="timeline-date">2024 - Present</div>
               <div className="timeline-content">
                 <h3>Frontend & Backend Development, Mini-Game Development</h3>
-                <p>Engaged in comprehensive web development including frontend and backend development, as well as mini-game development.</p>
+                <p className="timeline-subtitle">Representative Works</p>
+                <ul className="timeline-details">
+                  <li><strong>Intelligent Question Bank System:</strong> Web-based exam preparation platform with AI-powered question classification</li>
+                  <li><strong>Legal Contract Inspection System:</strong> Automated contract analysis tool for legal professionals</li>
+                  <li><strong>I am a Cat:</strong> Casual mini-game developed following the viral "Orange Cat" internet trend</li>
+                  <li>Engaged in comprehensive web development including frontend and backend development, as well as mini-game development</li>
+                </ul>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-date">2023 - Present</div>
               <div className="timeline-content">
                 <h3>Application Software Development</h3>
-                <p>Started developing various application software including PC clients and mobile applications.</p>
+                <p className="timeline-subtitle">Representative Works</p>
+                <ul className="timeline-details">
+                  <li><strong>Momentus:</strong> All-in-one lifestyle assistant app combining multiple daily functions</li>
+                  <li><strong>Expense Tracking System:</strong> Personal finance management application with smart categorization</li>
+                  <li>Started developing various application software including PC clients and mobile applications</li>
+                </ul>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-date">2022 - 2023</div>
               <div className="timeline-content">
                 <h3>Recommendation Systems</h3>
-                <p>Began learning and exploring recommendation systems and recommendation algorithms.</p>
+                <p className="timeline-subtitle">Representative Works</p>
+                <ul className="timeline-details">
+                  <li><strong>Knowledge Graph-based Cruise Route Recommendation:</strong> Intelligent recommendation system using knowledge graph technology, providing more accurate and efficient recommendations compared to traditional collaborative filtering methods</li>
+                  <li>Began learning and exploring recommendation systems and recommendation algorithms</li>
+                </ul>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-date">2020 - 2022</div>
               <div className="timeline-content">
                 <h3>Python Development</h3>
-                <p>Started learning Python programming and developing practical software applications using Python.</p>
+                <p className="timeline-subtitle">Representative Works</p>
+                <ul className="timeline-details">
+                  <li><strong>Desktop File Editing Software:</strong> Custom file management and editing tools for productivity</li>
+                  <li><strong>Office Widgets:</strong> Small utility applications to enhance office productivity</li>
+                  <li>Started learning Python programming and developing practical software applications using Python</li>
+                </ul>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-date">2019 - 2020</div>
               <div className="timeline-content">
                 <h3>Computer Software Development</h3>
-                <p>Began learning computer software development and programming fundamentals.</p>
+                <p className="timeline-subtitle">Representative Works</p>
+                <ul className="timeline-details">
+                  <li><strong>Desktop File Editing Software:</strong> Custom file management and editing tools for productivity</li>
+                  <li><strong>Office Widgets:</strong> Small utility applications to enhance office productivity</li>
+                  <li>Began learning computer software development and programming fundamentals</li>
+                </ul>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-date">2013 - 2019</div>
               <div className="timeline-content">
                 <h3>Mobile System UI Development</h3>
-                <p>Started Android system UI modification and personalized system customization. Specialized in Samsung TouchWiz system development.</p>
+                <p className="timeline-subtitle">Samsung TouchWiz & Android Native System</p>
+                <ul className="timeline-details">
+                  <li><strong>Tuifei OS:</strong> Major personal ROM project with over <strong>100+ users</strong>, featuring customized UI and enhanced functionality</li>
+                  <li>Started Android system UI modification and personalized system customization</li>
+                  <li>Specialized in Samsung TouchWiz system development and Android native system customization</li>
+                  <li>Focused on creating intuitive and visually appealing user interfaces</li>
+                </ul>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-date">2012 - 2013</div>
               <div className="timeline-content">
                 <h3>Java Learning</h3>
-                <p>Began learning Java programming language and Android software development.</p>
+                <p className="timeline-subtitle">The Beginning of Programming Journey</p>
+                <ul className="timeline-details">
+                  <li>Started by developing small Java games, which sparked deep interest in programming</li>
+                  <li>Became fascinated with Java's object-oriented concepts and syntax</li>
+                  <li>Dedicated significant time to learning programming theory and fundamentals</li>
+                  <li>This early passion for Java laid the foundation for a career in software development</li>
+                </ul>
               </div>
             </div>
           </div>
