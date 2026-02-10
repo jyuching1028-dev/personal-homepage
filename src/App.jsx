@@ -244,6 +244,20 @@ function App() {
           <h2>Experience</h2>
           <div className="timeline">
             <div className="timeline-item">
+              <div className="timeline-date">2023 - 2024</div>
+              <div className="timeline-content">
+                <h3>Logistics Information System Development @ Caterpillar Inc.</h3>
+                <p className="timeline-subtitle">CLC Factory & CL TC Factory</p>
+                <ul className="timeline-details">
+                  <li>Assisted colleagues in developing logistics information systems for two Caterpillar factories</li>
+                  <li>Led the development of logistics tracking and post-inspection module</li>
+                  <li>Conducted requirements gathering and analysis with factory stakeholders</li>
+                  <li>Successfully reduced logistics inspection time to <strong>60%</strong> of original duration</li>
+                  <li>Significantly improved operational efficiency and reduced manpower requirements</li>
+                </ul>
+              </div>
+            </div>
+            <div className="timeline-item">
               <div className="timeline-date">2024 - Present</div>
               <div className="timeline-content">
                 <h3>Frontend & Backend Development, Mini-Game Development</h3>
