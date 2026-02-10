@@ -1,10 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
-  const [hoveredImage, setHoveredImage] = useState(null);
-  const imageTimeoutRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,36 +32,8 @@ function App() {
     }
   };
 
-  const handleMouseEnter = (src) => {
-    if (imageTimeoutRef.current) {
-      clearTimeout(imageTimeoutRef.current);
-    }
-    setHoveredImage(src);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredImage(null);
-  };
-
-  const closePreview = () => {
-    setHoveredImage(null);
-  };
-
   return (
     <div className="app">
-      {hoveredImage && (
-        <div 
-          className="image-preview-overlay"
-          onClick={closePreview}
-        >
-          <img 
-            src={hoveredImage} 
-            alt="Preview" 
-            className="image-preview-zoomed"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
       <nav className="navbar">
         <div className="navbar-container">
           <div className="logo">Yucheng Huang (Jyuching Wong)</div>
@@ -139,13 +109,13 @@ function App() {
           <h2>Projects</h2>
           <div className="projects-grid">
             <div className="project-card">
-              <img 
-                src="/photos/Cruise Route Recommendation.png" 
-                alt="Knowledge Graph Recommendation" 
-                onError={(e) => { e.target.parentElement.style.display = 'none'; }}
-                onMouseEnter={(e) => handleMouseEnter(e.target.src)}
-                onMouseLeave={handleMouseLeave}
-              />
+              <div className="project-image-wrapper">
+                <img 
+                  src="/photos/Cruise Route Recommendation.png" 
+                  alt="Knowledge Graph Recommendation"
+                  onError={(e) => { e.target.style.display = 'none'; }}
+                />
+              </div>
               <div className="project-card-content">
                 <h3>Cruise Route Recommendation</h3>
                 <p>A personalized cruise ship route recommendation system based on knowledge graph technology. The system analyzes user preferences and travel history to provide intelligent route suggestions using graph-based algorithms.</p>
@@ -164,9 +134,9 @@ function App() {
               <img 
                 src="/photos/Manufacturing Demand Prediction.png" 
                 alt="Material Demand Prediction" 
-                onError={(e) => { e.target.parentElement.style.display = 'none'; }}
-                onMouseEnter={(e) => handleMouseEnter(e.target.src)}
-                onMouseLeave={handleMouseLeave}
+                onError={(e) => { e.target.style.display = 'none'; }}
+                
+                
               />
               <div className="project-card-content">
                 <h3>Manufacturing Demand Prediction</h3>
@@ -186,9 +156,9 @@ function App() {
               <img 
                 src="/photos/Momentus.png" 
                 alt="Momentus App" 
-                onError={(e) => { e.target.parentElement.style.display = 'none'; }}
-                onMouseEnter={(e) => handleMouseEnter(e.target.src)}
-                onMouseLeave={handleMouseLeave}
+                onError={(e) => { e.target.style.display = 'none'; }}
+                
+                
               />
               <div className="project-card-content">
                 <h3>Momentus</h3>
@@ -208,9 +178,9 @@ function App() {
               <img 
                 src="/photos/Xuechao Course Platform.png" 
                 alt="Xuechao App" 
-                onError={(e) => { e.target.parentElement.style.display = 'none'; }}
-                onMouseEnter={(e) => handleMouseEnter(e.target.src)}
-                onMouseLeave={handleMouseLeave}
+                onError={(e) => { e.target.style.display = 'none'; }}
+                
+                
               />
               <div className="project-card-content">
                 <h3>Xuechao Course Platform</h3>
@@ -230,9 +200,9 @@ function App() {
               <img 
                 src="/photos/I am a Cat.png" 
                 alt="I am a Cat Game" 
-                onError={(e) => { e.target.parentElement.style.display = 'none'; }}
-                onMouseEnter={(e) => handleMouseEnter(e.target.src)}
-                onMouseLeave={handleMouseLeave}
+                onError={(e) => { e.target.style.display = 'none'; }}
+                
+                
               />
               <div className="project-card-content">
                 <h3>I am a Cat</h3>
@@ -252,9 +222,9 @@ function App() {
               <img 
                 src="/photos/Expense Tracker.png" 
                 alt="Expense Tracker App" 
-                onError={(e) => { e.target.parentElement.style.display = 'none'; }}
-                onMouseEnter={(e) => handleMouseEnter(e.target.src)}
-                onMouseLeave={handleMouseLeave}
+                onError={(e) => { e.target.style.display = 'none'; }}
+                
+                
               />
               <div className="project-card-content">
                 <h3>Expense Tracker</h3>
@@ -274,9 +244,9 @@ function App() {
               <img 
                 src="/photos/Android System Development.png" 
                 alt="Android System Development" 
-                onError={(e) => { e.target.parentElement.style.display = 'none'; }}
-                onMouseEnter={(e) => handleMouseEnter(e.target.src)}
-                onMouseLeave={handleMouseLeave}
+                onError={(e) => { e.target.style.display = 'none'; }}
+                
+                
               />
               <div className="project-card-content">
                 <h3>Mobile System Development</h3>
@@ -296,9 +266,9 @@ function App() {
               <img 
                 src="/photos/Low Frequency Quantitative Trading.png" 
                 alt="Low Frequency Quantitative Trading" 
-                onError={(e) => { e.target.parentElement.style.display = 'none'; }}
-                onMouseEnter={(e) => handleMouseEnter(e.target.src)}
-                onMouseLeave={handleMouseLeave}
+                onError={(e) => { e.target.style.display = 'none'; }}
+                
+                
               />
               <div className="project-card-content">
                 <h3>Low Frequency Quantitative Trading</h3>
