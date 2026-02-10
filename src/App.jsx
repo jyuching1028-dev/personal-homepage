@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [hoveredImage, setHoveredImage] = useState(null);
+  const imageTimeoutRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,12 +34,30 @@ function App() {
     }
   };
 
+  const handleMouseEnter = (src) => {
+    if (imageTimeoutRef.current) {
+      clearTimeout(imageTimeoutRef.current);
+    }
+    setHoveredImage(src);
+  };
+
+  const handleMouseLeave = () => {
+    imageTimeoutRef.current = setTimeout(() => {
+      setHoveredImage(null);
+    }, 100);
+  };
+
   return (
     <div className="app">
       {hoveredImage && (
         <div 
           className="image-preview-overlay"
-          onMouseLeave={() => setHoveredImage(null)}
+          onMouseEnter={() => {
+            if (imageTimeoutRef.current) {
+              clearTimeout(imageTimeoutRef.current);
+            }
+          }}
+          onMouseLeave={handleMouseLeave}
         >
           <img 
             src={hoveredImage} 
@@ -126,8 +145,8 @@ function App() {
                 src="/photos/Cruise Route Recommendation.png" 
                 alt="Knowledge Graph Recommendation" 
                 onError={(e) => { e.target.parentElement.style.display = 'none'; }}
-                onMouseEnter={(e) => setHoveredImage(e.target.src)}
-                onMouseLeave={() => setHoveredImage(null)}
+                onMouseEnter={(e) => handleMouseEnter(e.target.src)}
+                onMouseLeave={handleMouseLeave}
               />
               <div className="project-card-content">
                 <h3>Cruise Route Recommendation</h3>
@@ -148,8 +167,8 @@ function App() {
                 src="/photos/Manufacturing Demand Prediction.png" 
                 alt="Material Demand Prediction" 
                 onError={(e) => { e.target.parentElement.style.display = 'none'; }}
-                onMouseEnter={(e) => setHoveredImage(e.target.src)}
-                onMouseLeave={() => setHoveredImage(null)}
+                onMouseEnter={(e) => handleMouseEnter(e.target.src)}
+                onMouseLeave={handleMouseLeave}
               />
               <div className="project-card-content">
                 <h3>Manufacturing Demand Prediction</h3>
@@ -170,8 +189,8 @@ function App() {
                 src="/photos/Momentus.png" 
                 alt="Momentus App" 
                 onError={(e) => { e.target.parentElement.style.display = 'none'; }}
-                onMouseEnter={(e) => setHoveredImage(e.target.src)}
-                onMouseLeave={() => setHoveredImage(null)}
+                onMouseEnter={(e) => handleMouseEnter(e.target.src)}
+                onMouseLeave={handleMouseLeave}
               />
               <div className="project-card-content">
                 <h3>Momentus</h3>
@@ -192,8 +211,8 @@ function App() {
                 src="/photos/Xuechao Course Platform.png" 
                 alt="Xuechao App" 
                 onError={(e) => { e.target.parentElement.style.display = 'none'; }}
-                onMouseEnter={(e) => setHoveredImage(e.target.src)}
-                onMouseLeave={() => setHoveredImage(null)}
+                onMouseEnter={(e) => handleMouseEnter(e.target.src)}
+                onMouseLeave={handleMouseLeave}
               />
               <div className="project-card-content">
                 <h3>Xuechao Course Platform</h3>
@@ -214,8 +233,8 @@ function App() {
                 src="/photos/I am a Cat.png" 
                 alt="I am a Cat Game" 
                 onError={(e) => { e.target.parentElement.style.display = 'none'; }}
-                onMouseEnter={(e) => setHoveredImage(e.target.src)}
-                onMouseLeave={() => setHoveredImage(null)}
+                onMouseEnter={(e) => handleMouseEnter(e.target.src)}
+                onMouseLeave={handleMouseLeave}
               />
               <div className="project-card-content">
                 <h3>I am a Cat</h3>
@@ -236,8 +255,8 @@ function App() {
                 src="/photos/Expense Tracker.png" 
                 alt="Expense Tracker App" 
                 onError={(e) => { e.target.parentElement.style.display = 'none'; }}
-                onMouseEnter={(e) => setHoveredImage(e.target.src)}
-                onMouseLeave={() => setHoveredImage(null)}
+                onMouseEnter={(e) => handleMouseEnter(e.target.src)}
+                onMouseLeave={handleMouseLeave}
               />
               <div className="project-card-content">
                 <h3>Expense Tracker</h3>
@@ -258,8 +277,8 @@ function App() {
                 src="/photos/Android System Development.png" 
                 alt="Android System Development" 
                 onError={(e) => { e.target.parentElement.style.display = 'none'; }}
-                onMouseEnter={(e) => setHoveredImage(e.target.src)}
-                onMouseLeave={() => setHoveredImage(null)}
+                onMouseEnter={(e) => handleMouseEnter(e.target.src)}
+                onMouseLeave={handleMouseLeave}
               />
               <div className="project-card-content">
                 <h3>Mobile System Development</h3>
@@ -280,8 +299,8 @@ function App() {
                 src="/photos/Low Frequency Quantitative Trading.png" 
                 alt="Low Frequency Quantitative Trading" 
                 onError={(e) => { e.target.parentElement.style.display = 'none'; }}
-                onMouseEnter={(e) => setHoveredImage(e.target.src)}
-                onMouseLeave={() => setHoveredImage(null)}
+                onMouseEnter={(e) => handleMouseEnter(e.target.src)}
+                onMouseLeave={handleMouseLeave}
               />
               <div className="project-card-content">
                 <h3>Low Frequency Quantitative Trading</h3>
